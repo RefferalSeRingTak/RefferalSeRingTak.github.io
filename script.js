@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Live Dating Timer Logic
-    // Set to April 13, 2024
     const startDate = new Date('2024-04-13T00:00:00').getTime();
 
     function updateTimer() {
@@ -12,10 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById('days').innerText = days;
-        document.getElementById('hours').innerText = hours;
-        document.getElementById('minutes').innerText = minutes;
-        document.getElementById('seconds').innerText = seconds;
+        const daysEl = document.getElementById('days');
+        if (daysEl) {
+            daysEl.innerText = days;
+            document.getElementById('hours').innerText = hours;
+            document.getElementById('minutes').innerText = minutes;
+            document.getElementById('seconds').innerText = seconds;
+        }
     }
 
     setInterval(updateTimer, 1000);
@@ -27,28 +29,58 @@ document.addEventListener('DOMContentLoaded', () => {
     const gameArea = document.getElementById('gameArea');
     const successScreen = document.getElementById('success-screen');
 
-    // Make the No button run away!
-    noBtn.addEventListener('mouseover', () => {
-        const areaWidth = gameArea.clientWidth;
-        const areaHeight = gameArea.clientHeight;
-        const btnWidth = noBtn.clientWidth;
-        const btnHeight = noBtn.clientHeight;
+    if (noBtn) {
+        noBtn.addEventListener('mouseover', () => {
+            const areaWidth = gameArea.clientWidth;
+            const areaHeight = gameArea.clientHeight;
+            const btnWidth = noBtn.clientWidth;
+            const btnHeight = noBtn.clientHeight;
 
-        // Ensure jumping stays within limits of the game area boundary
-        const randomX = Math.floor(Math.random() * (areaWidth - btnWidth));
-        const randomY = Math.floor(Math.random() * (areaHeight - btnHeight));
+            const randomX = Math.floor(Math.random() * (areaWidth - btnWidth));
+            const randomY = Math.floor(Math.random() * (areaHeight - btnHeight));
 
-        noBtn.style.position = 'absolute';
-        noBtn.style.left = `${randomX}px`;
-        noBtn.style.top = `${randomY}px`;
-    });
+            noBtn.style.position = 'absolute';
+            noBtn.style.left = `${randomX}px`;
+            noBtn.style.top = `${randomY}px`;
+        });
+    }
 
-    // Handle Yes Click
-    yesBtn.addEventListener('click', () => {
-        gameArea.style.display = 'none';
-        document.querySelector('.apology-text').style.display = 'none';
+    if (yesBtn) {
+        yesBtn.addEventListener('click', () => {
+            gameArea.style.display = 'none';
+            document.querySelector('.apology-text').style.display = 'none';
 
-        successScreen.classList.remove('hidden');
-        successScreen.style.animation = 'fadeIn 1.5s ease forwards';
-    });
+            successScreen.classList.remove('hidden');
+            successScreen.style.animation = 'fadeIn 1.5s ease forwards';
+        });
+    }
+
+    // 3. SPA Enter Site Logic
+    const enterSiteBtn = document.getElementById('enter-site-btn');
+    const welcomeGate = document.getElementById('welcome-gate');
+    const mainContent = document.getElementById('main-content');
+
+    if (enterSiteBtn) {
+        enterSiteBtn.addEventListener('click', () => {
+            // Hide the gate
+            welcomeGate.style.opacity = '0';
+            welcomeGate.style.transition = 'opacity 0.8s ease';
+
+            setTimeout(() => {
+                welcomeGate.style.display = 'none';
+
+                // Show Main Content
+                mainContent.classList.remove('hidden');
+                mainContent.style.opacity = '0';
+                mainContent.style.transition = 'opacity 1s ease-in';
+
+                // Trigger reflow
+                void mainContent.offsetWidth;
+                mainContent.style.opacity = '1';
+
+                // Scroll to top
+                window.scrollTo(0, 0);
+            }, 800);
+        });
+    }
 });

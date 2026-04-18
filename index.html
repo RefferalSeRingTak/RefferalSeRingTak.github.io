@@ -19,15 +19,40 @@
         <div class="blob blob-2"></div>
     </div>
 
-    <main class="container">
+    <!-- THE APOLOGY GATEWAY -->
+    <div id="welcome-gate" class="fullscreen-gate">
+        <div class="glass-card-large apology-content">
+            <h2>Can we talk? 🥺</h2>
+            <div class="apology-text">
+                <p>I know we've had some fights recently, and things have been difficult.</p>
+                <p>I am so, so sorry for everything that happened. I miss us. I built this just to show you how much I
+                    care about you, Tanisha.</p>
+                <h3 class="question">Can we please reconcile and get back together?</h3>
+            </div>
+
+            <div class="game-area" id="gameArea">
+                <button id="btn-yes" class="game-btn yes-btn">Yes, I forgive you ❤️</button>
+                <button id="btn-no" class="game-btn no-btn">No</button>
+            </div>
+
+            <div id="success-screen" class="hidden success-anim">
+                <h2>YAY! 🎉</h2>
+                <p style="margin-bottom: 2rem;">I love you so much, Cutu! Thank you for forgiving your Brown Bear. ❤️
+                </p>
+                <button id="enter-site-btn" class="cta-btn mt-2">See what I made for you 🎁</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN LOCKED CONTENT -->
+    <main id="main-content" class="container hidden fade-in-section">
         <nav class="glass-nav">
             <h1 class="logo">Brown Bear & White Catty ✨</h1>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#our-story">Our Story</a></li>
-                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#why">Why You</a></li>
-                <li><a href="#apology">A Special Note</a></li>
+                <li><a href="#gallery">Gallery</a></li>
             </ul>
         </nav>
 
@@ -45,7 +70,6 @@
                 <h2>Our Timeline ⏳</h2>
                 <p class="story-text">It all started on <strong>April 13, 2024</strong> with a simple LinkedIn message
                     asking for a referral... little did we know it would lead to this.</p>
-
                 <p class="story-text">And the best day of my life was <strong>September 28, 2024</strong>—the day I
                     proposed and you said YES! 💍</p>
             </div>
@@ -69,36 +93,10 @@
             </div>
         </section>
 
-        <section id="gallery" class="content-section">
-            <h2 class="section-title">Our Best Moments 📸</h2>
-            <p class="section-subtitle">A collection of our favorite memories.</p>
-            <div class="gallery-grid">
-                <!-- User can replace these images -->
-                <div class="gallery-item">
-                    <div class="placeholder-img" data-text="Place Image 1 Here"></div>
-                </div>
-                <div class="gallery-item">
-                    <div class="placeholder-img" data-text="Place Image 2 Here"></div>
-                </div>
-                <div class="gallery-item">
-                    <div class="placeholder-img" data-text="Place Image 3 Here"></div>
-                </div>
-                <div class="gallery-item">
-                    <div class="placeholder-img" data-text="Place Image 4 Here"></div>
-                </div>
-                <div class="gallery-item">
-                    <div class="placeholder-img" data-text="Place Image 5 Here"></div>
-                </div>
-                <div class="gallery-item">
-                    <div class="placeholder-img" data-text="Place Image 6 Here"></div>
-                </div>
-            </div>
-        </section>
-
         <section id="why" class="content-section">
             <h2 class="section-title">Why I Love You 💖</h2>
             <p class="section-subtitle">There are endless reasons, but here are just a few...</p>
-            <div class="reasons-grid">
+            <div class="reasons-grid new-grid-layout">
                 <div class="reason-card">
                     <h3>Your Smile ✨</h3>
                     <p>I just want to see you smile and laugh, always. It lights up my whole world.</p>
@@ -125,24 +123,27 @@
             </div>
         </section>
 
-        <section id="apology" class="content-section glass-card-large">
-            <div class="apology-content">
-                <h2>Can we talk? 🥺</h2>
-                <div class="apology-text">
-                    <p>I know we've had some fights recently, and things have been difficult.</p>
-                    <p>I am so, so sorry for everything that happened. I miss us. I built this just to show you how much
-                        I care about you, Tanisha.</p>
-                    <h3 class="question">Can we please reconcile and get back together?</h3>
+        <section id="gallery" class="content-section">
+            <h2 class="section-title">Our Best Moments 📸</h2>
+            <p class="section-subtitle">A collection of our favorite memories.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="placeholder-img" data-text="Place Image 1 Here"></div>
                 </div>
-
-                <div class="game-area" id="gameArea">
-                    <button id="btn-yes" class="game-btn yes-btn">Yes, I forgive you ❤️</button>
-                    <button id="btn-no" class="game-btn no-btn">No</button>
+                <div class="gallery-item">
+                    <div class="placeholder-img" data-text="Place Image 2 Here"></div>
                 </div>
-
-                <div id="success-screen" class="hidden success-anim">
-                    <h2>YAY! 🎉</h2>
-                    <p>I love you so much, Cutu! Thank you for forgiving your Brown Bear. ❤️</p>
+                <div class="gallery-item">
+                    <div class="placeholder-img" data-text="Place Image 3 Here"></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img" data-text="Place Image 4 Here"></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img" data-text="Place Image 5 Here"></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img" data-text="Place Image 6 Here"></div>
                 </div>
             </div>
         </section>
