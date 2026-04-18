@@ -60,8 +60,13 @@ body {
 }
 
 @keyframes float {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(50px, 50px) scale(1.1); }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(50px, 50px) scale(1.1);
+    }
 }
 
 .container {
@@ -219,7 +224,8 @@ body {
 }
 
 .hidden {
-    display: none; /* Only visually hidden until animation removes class, fallback handled by JS */
+    display: none;
+    /* Only visually hidden until animation removes class, fallback handled by JS */
 }
 
 @keyframes fadeIn {
@@ -227,6 +233,7 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -251,14 +258,18 @@ body {
     margin: 2rem 0;
 }
 
-.story-header h2, .section-title, .apology-content h2 {
+.story-header h2,
+.section-title,
+.apology-content h2 {
     font-size: 3.5rem;
     font-family: 'Playfair Display', serif;
     color: var(--primary-color);
     margin-bottom: 1.5rem;
 }
 
-.story-text, .section-subtitle, .apology-text p {
+.story-text,
+.section-subtitle,
+.apology-text p {
     font-size: 1.25rem;
     color: var(--text-muted);
     margin-bottom: 1.5rem;
@@ -343,11 +354,11 @@ body {
 .placeholder-img {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(255,77,109,0.1), rgba(123,44,191,0.1));
+    background: linear-gradient(135deg, rgba(255, 77, 109, 0.1), rgba(123, 44, 191, 0.1));
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px dashed rgba(255,255,255,0.2);
+    border: 2px dashed rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     transition: border-color 0.3s ease;
 }
@@ -364,13 +375,67 @@ body {
     opacity: 0.8;
 }
 
+/* Reasons Section */
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.reason-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 77, 109, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.reason-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px rgba(255, 77, 109, 0.15);
+}
+
+.reason-card h3 {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.reason-card p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.final-thought {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.final-thought h3 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.final-thought p {
+    font-size: 1.3rem;
+    color: var(--text-main);
+    line-height: 1.8;
+}
+
 /* Apology Game */
 .question {
     font-size: 2.2rem;
     color: #ffffff;
     margin: 3rem 0;
     font-weight: 800;
-    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .game-area {
@@ -380,7 +445,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 24px;
     margin-top: 2rem;
     overflow: hidden;
