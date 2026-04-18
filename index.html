@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For You ❤️</title>
+    <title>For Tanisha ❤️</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@1,600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div class="background-effects">
         <div class="blob blob-1"></div>
@@ -17,26 +21,94 @@
 
     <main class="container">
         <nav class="glass-nav">
-            <h1 class="logo">Our Website ✨</h1>
+            <h1 class="logo">Brown Bear & White Catty ✨</h1>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#our-story">Our Story</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#messages">Messages</a></li>
+                <li><a href="#apology">A Special Note</a></li>
             </ul>
         </nav>
 
         <section id="home" class="hero">
             <div class="hero-content">
-                <h2 class="title">Hello <span class="highlight">Beautiful</span></h2>
-                <p class="subtitle">A special little corner of the internet, just for us.</p>
-                <button class="cta-btn" id="surpriseBtn">Click for a surprise 🎁</button>
+                <h2 class="title">Hello <span class="highlight">White Catty (Cutu)</span></h2>
+                <p class="subtitle">A special little corner of the internet, beautifully crafted just for you, from your
+                    Brown Bear.</p>
+                <a href="#our-story" class="cta-btn">Scroll Down 👇</a>
             </div>
-            
-            <div class="glass-card hidden" id="messageCard">
-                <div class="card-content">
-                    <h3>You are amazing! 💖</h3>
-                    <p>I built this website from scratch just to show you how much I care.</p>
-                    <button class="close-btn" id="closeBtn">Close</button>
+        </section>
+
+        <section id="our-story" class="content-section glass-card-large">
+            <div class="story-header">
+                <h2>Our Timeline ⏳</h2>
+                <p class="story-text">It all started on <strong>April 13, 2024</strong> with a simple LinkedIn message
+                    asking for a referral... little did we know it would lead to this.</p>
+            </div>
+
+            <div class="timer-container">
+                <h3>We have been officially together since April 30th, 2024:</h3>
+                <div class="timer-grid" id="dating-timer">
+                    <div class="time-box"><span id="days">0</span>
+                        <p>Days</p>
+                    </div>
+                    <div class="time-box"><span id="hours">0</span>
+                        <p>Hours</p>
+                    </div>
+                    <div class="time-box"><span id="minutes">0</span>
+                        <p>Minutes</p>
+                    </div>
+                    <div class="time-box"><span id="seconds">0</span>
+                        <p>Seconds</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="content-section">
+            <h2 class="section-title">Our Best Moments 📸</h2>
+            <p class="section-subtitle">A collection of our favorite memories.</p>
+            <div class="gallery-grid">
+                <!-- User can replace these images -->
+                <div class="gallery-item">
+                    <div class="placeholder-img" data-text="Place Image 1 Here"></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img" data-text="Place Image 2 Here"></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img" data-text="Place Image 3 Here"></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img" data-text="Place Image 4 Here"></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img" data-text="Place Image 5 Here"></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img" data-text="Place Image 6 Here"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="apology" class="content-section glass-card-large">
+            <div class="apology-content">
+                <h2>Can we talk? 🥺</h2>
+                <div class="apology-text">
+                    <p>I know we've had some fights recently, and things have been difficult.</p>
+                    <p>I am so, so sorry for everything that happened. I miss us. I built this just to show you how much
+                        I care about you, Tanisha.</p>
+                    <h3 class="question">Can we please reconcile and get back together?</h3>
+                </div>
+
+                <div class="game-area" id="gameArea">
+                    <button id="btn-yes" class="game-btn yes-btn">Yes, I forgive you ❤️</button>
+                    <button id="btn-no" class="game-btn no-btn">No</button>
+                </div>
+
+                <div id="success-screen" class="hidden success-anim">
+                    <h2>YAY! 🎉</h2>
+                    <p>I love you so much, Cutu! Thank you for forgiving your Brown Bear. ❤️</p>
                 </div>
             </div>
         </section>
@@ -44,4 +116,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
