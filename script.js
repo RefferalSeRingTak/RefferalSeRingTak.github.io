@@ -1,23 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Live Dating Timer Logic
-    // Set to April 30, 2024
-    const startDate = new Date('2024-04-30T00:00:00').getTime();
-    
+    // Set to April 13, 2024
+    const startDate = new Date('2024-04-13T00:00:00').getTime();
+
     function updateTimer() {
         const now = new Date().getTime();
         const distance = now - startDate;
-        
+
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
+
         document.getElementById('days').innerText = days;
         document.getElementById('hours').innerText = hours;
         document.getElementById('minutes').innerText = minutes;
         document.getElementById('seconds').innerText = seconds;
     }
-    
+
     setInterval(updateTimer, 1000);
     updateTimer();
 
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     yesBtn.addEventListener('click', () => {
         gameArea.style.display = 'none';
         document.querySelector('.apology-text').style.display = 'none';
-        
+
         successScreen.classList.remove('hidden');
         successScreen.style.animation = 'fadeIn 1.5s ease forwards';
     });
